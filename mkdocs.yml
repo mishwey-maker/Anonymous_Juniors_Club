@@ -37,15 +37,8 @@ theme: # Тема сайта, информация о ее параметрах
       accent: blue
 nav: # Структура сайта
     - Главная страница: index.md
-    - Дневные отчёты: 
-      - DayCheck/index.md
-      - День 0: DayCheck/Day0
-      - Old:
-        - DayCheck/Old/index.md
-        - День 1: DayCheck/Old/Day1-old.md
-        - День 2: DayCheck/Old/Day2-old.md
-        - День 3: DayCheck/Old/Day3-old.md
-        - День 4: DayCheck/Old/Day4-old.md
+    - Дневные отчёты: DayCheck/Day0.md
+    - old: old/Day1-old.md
         
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
