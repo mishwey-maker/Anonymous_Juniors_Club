@@ -2,7 +2,6 @@ site_name: Anonymous Juniors Club
 site_description: Anonymous Juniors Club
 theme: # Тема сайта, информация о ее параметрах
   name: material # Название темы
-  logo: logo.svg # Ссылка на логотип сайта
   font:
     text: Roboto # Шрифт текста
     code: Roboto Mono # Шрифт для текста кода
@@ -42,3 +41,8 @@ nav: # Структура сайта
       - Дневные отчёты/index.md
       - Old:
         - Old/index.md
+        - День 1: Old/День 1 old.md
+        - День 2: Old/День 2 old.md
+        - День 3: Old/День 3 old.md
+        - День 4: Old/День 4 old.md
+        
