@@ -38,7 +38,7 @@ theme: # Тема сайта, информация о ее параметрах
 nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: DayCheck/Day0.md
-    - old: DayCheck/Day1-old.md
+    - old: old/Day1-old.md
         
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
