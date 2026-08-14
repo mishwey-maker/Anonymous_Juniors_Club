@@ -39,6 +39,7 @@ nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: 
       - DayCheck/index.md
+      - День 0: DayCheck/Day0
       - Old:
         - Old/index.md
         - День 1: Old/Day1-old.md
