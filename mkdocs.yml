@@ -38,13 +38,13 @@ theme: # Тема сайта, информация о ее параметрах
 nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: 
-      - Дневные отчёты/index.md
+      - DayCheck/index.md
       - Old:
         - Old/index.md
-        - Old/День 1 old.md
-        - Old/День 2 old.md
-        - Old/День 3 old.md
-        - Old/День 4 old.md
+        - Old/Day1-old.md
+        - Old/Day2-old.md
+        - Old/Day3-old.md
+        - Old/Day4-old.md
         
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
