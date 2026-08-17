@@ -38,6 +38,14 @@ theme: # Тема сайта, информация о ее параметрах
 nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: DayCheck/Day0.md
+    - Курсы: Course/index.md
+    - Обзоры: reviews/index.md
+    - Что почитать: 
+      - WhatRead/index.md
+      - Амир Вафин "Абсолютная дисциплина": WhatRead/amir.md
+      - Кэл Ньюпорт "Хватит мечтать. Займись делом": WhatRead/dream.md
+      - Джон П. Стрелеки "Кафе на краю земли": WhatRead/streleki.md
+      - Бионический шрифт: WhatRead/bio.md
     - old: old/Day1-old.md
         
 markdown_extensions: # Расширения markdown
