@@ -41,7 +41,9 @@ nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: DayCheck/Day0.md
     - Курсы: Course/index.md
-    - Обзоры: reviews/index.md
+    - Обзоры: 
+      - reviews/index.md
+      - Обзор на любимые книги ч.1: reviews/time.md
     - Что почитать: 
       - WhatRead/index.md
       - Амир Вафин "Абсолютная дисциплина": WhatRead/amir.md
