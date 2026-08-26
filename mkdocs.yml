@@ -1,19 +1,21 @@
-site_name: Anonymous Juniors Club
-site_description: Anonymous Juniors Club
+site_name: Клуб анонимных джунов
+site_description: Клуб анонимных джунов
 theme: # Тема сайта, информация о ее параметрах
   name: material # Название темы
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
   font:
     text: Roboto # Шрифт текста
-    code: Roboto Mono # Шрифт для текста кода
+    code: Roboto Mono # Шрифт для текста кода 
   features:
     #- navigation.sections
     - navigation.path # Хлебные крошки
     - navigation.indexes # Позволяет создавать корневые страницы разделов меню. Корневая страница должна лежать в папке раздела и называться index.md. Пример использования корневых страниц приведен ниже в настройках nav
-    #- navigation.tabs # Верхнее меню
-    #- navigation.tabs.sticky # Фиксация верхнего меню
-    #- Navigation sections # Настройка спойлеров в левом меню
-    #- navigation.expand # Разворачивает спойлеры в левом меню по умолчанию
-    #- toc.integrate # Фиксирует оглавление страницы в левом меню
+    - navigation.tabs # Верхнее меню
+    - navigation.tabs.sticky # Фиксация верхнего меню
+    - Navigation sections # Настройка спойлеров в левом меню
+    - navigation.expand # Разворачивает спойлеры в левом меню по умолчанию
+    - toc.integrate # Фиксирует оглавление страницы в левом меню
     - navigation.instant # Функция быстрой загрузки страниц
     - navigation.top # Добавляет кнопку «к началу» для быстрой обратной прокрутки страницы
     - search.suggest # Подсказки при вводе поискового запроса
@@ -21,20 +23,20 @@ theme: # Тема сайта, информация о ее параметрах
     - content.code.copy # Кнопка копирования в блоке кода
   language: ru # Язык
   palette: # Настройки светлой и тёмной тем
-    # Настройки светлой темы
-    - scheme: default 
+  # Светлая тема
+    - scheme: default
+      primary: blue grey
+      accent: blue
       toggle:
-        icon: material/weather-sunny # Иконка для активации светлой темы
-        name: Выключить солнышко # Всплывающий текст-подсказка
-      primary: blue # Основной цвет
-      accent: purple # Акцентный цвет
+        icon: material/brightness-7
+        name: Переключить на темную тему
     # Настройки тёмной темы
     - scheme: slate
-      toggle:
-        icon: material/weather-night
-        name: Позвать солнышко
-      primary: deep purple
+      primary: black
       accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
 nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: DayCheck/Day0.md
