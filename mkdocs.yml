@@ -41,6 +41,9 @@ nav: # Структура сайта
     - Главная страница: index.md
     - Дневные отчёты: DayCheck/Day0.md
     - Курсы: Course/index.md
+    - Полезное: 
+      - useful/index.md
+      - Макрос для создания таблицы сокращений в Word: useful/Macword.md
     - Обзоры: 
       - reviews/index.md
       - Обзор любимых книг ч.1: reviews/time.md
