@@ -39,21 +39,21 @@ theme: # Тема сайта, информация о ее параметрах
         name: Переключить на светлую тему
 nav: # Структура сайта
     - Главная страница: index.md
-    - Дневные отчёты: DayCheck/Day0.md
     - Курсы: Course/index.md
     - Полезное: 
-      - useful/index.md
+      - Полезное: useful/index.md
       - Макрос для создания таблицы сокращений в Word: useful/Macword.md
+      - Инструкция по развертыванию MkDocs: useful/macros/#1 Begin.md
     - Обзоры: 
-      - reviews/index.md
+      - Обзоры: reviews/index.md
       - Обзор любимых книг ч.1: reviews/time.md
     - Что почитать: 
-      - WhatRead/index.md
+      - Что почитать: WhatRead/index.md
       - Амир Вафин "Абсолютная дисциплина": WhatRead/amir.md
       - Кэл Ньюпорт "Хватит мечтать. Займись делом": WhatRead/dream.md
       - Джон П. Стрелеки "Кафе на краю земли": WhatRead/streleki.md
       - Бионический шрифт: WhatRead/bio.md
-    - old: old/Day1-old.md
+
         
 markdown_extensions: # Расширения markdown
   - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
