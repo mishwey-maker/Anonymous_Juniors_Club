@@ -40,6 +40,13 @@ theme: # Тема сайта, информация о ее параметрах
 nav: # Структура сайта
     - Главная страница: index.md
     - Курсы: Course/index.md
+    - Карта техписа: 
+      - Карта технического писателя: Roadmap/index.md
+      - Базовые инструменты и письмо: 
+        - Markdown: 
+          - Junior: Roadmap/base/md/junior.md
+          - Middle: Roadmap/base/md/middle.md
+          - Senior: Roadmap/base/md/senior.md
     - Полезное: 
       - Полезное: useful/index.md
       - Макрос для создания таблицы сокращений в Word: useful/Macword.md
