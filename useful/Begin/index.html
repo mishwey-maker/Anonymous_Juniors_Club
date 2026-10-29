@@ -1,0 +1,7424 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Клуб анонимных джунов">
+      
+      
+      
+      
+        <link rel="prev" href="../Macword/">
+      
+      
+        <link rel="next" href="../../WhatRead/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>Инструкция по развертыванию MkDocs - Клуб анонимных джунов</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Клуб анонимных джунов" class="md-header__button md-logo" aria-label="Клуб анонимных джунов" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Клуб анонимных джунов
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Инструкция по развертыванию MkDocs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="blue"  aria-label="Переключить на темную тему"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Переключить на темную тему" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Переключить на светлую тему"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Переключить на светлую тему" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная страница
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Course/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Курсы
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Roadmap/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Карта техписа
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Полезное
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../WhatRead/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Что почитать
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Клуб анонимных джунов" class="md-nav__button md-logo" aria-label="Клуб анонимных джунов" data-md-component="logo">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Клуб анонимных джунов
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная страница
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Course/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Курсы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../Roadmap/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Карта техписа
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Карта техписа
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Базовые инструменты и письмо
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Базовые инструменты и письмо
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Markdown
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Markdown
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/md/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/md/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/md/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Git/GitHub
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Git/GitHub
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/git/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/git/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/git/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_3" id="__nav_3_2_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Редакторы(IDE)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Редакторы(IDE)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/ide/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/ide/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/ide/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_4" id="__nav_3_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Стиль и тон
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Стиль и тон
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/style/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/style/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/style/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_5" id="__nav_3_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Структура текста
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Структура текста
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/text/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/text/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/text/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_6" id="__nav_3_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Английский
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Английский
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/english/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/english/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/base/english/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Типы документации и методология
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Типы документации и методология
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_1" id="__nav_3_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    How-to/Tutorial
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    How-to/Tutorial
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/tutorial/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/tutorial/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/tutorial/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_2" id="__nav_3_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reference
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Reference
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/reference/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/reference/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/reference/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_3" id="__nav_3_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explanation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Explanation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/explanation/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/explanation/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/explanation/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_4" id="__nav_3_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Release notes
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Release notes
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/release/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/release/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/release/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_5" id="__nav_3_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Troubleshooting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/troubleshooting/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/troubleshooting/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/troubleshooting/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3_6" id="__nav_3_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Аудиторный анализ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Аудиторный анализ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/audit/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/audit/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metod/audit/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API-документация и техническая глубина
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    API-документация и техническая глубина
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_1" id="__nav_3_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    REST / HTTP
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    REST / HTTP
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/rest/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/rest/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/rest/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_2" id="__nav_3_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JSON / XML
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JSON / XML
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/json/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/json/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/json/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_3" id="__nav_3_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    OpenAPI / Swagger
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    OpenAPI / Swagger
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/openapi/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/openapi/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/openapi/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_4" id="__nav_3_4_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Postman / тестирование API
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Postman / тестирование API
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/postman/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/postman/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/postman/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_5" id="__nav_3_4_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Понимание кода
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Понимание кода
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/code/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/code/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/code/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4_6" id="__nav_3_4_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Документация SDK
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_4_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Документация SDK
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/sdk/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/sdk/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/api/sdk/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docs-as-code и автоматизация
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Docs-as-code и автоматизация
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_1" id="__nav_3_5_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статический генератор
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Статический генератор
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/ssg/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/ssg/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/ssg/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_2" id="__nav_3_5_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CI/CD для документации
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CI/CD для документации
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/cicd/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/cicd/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/cicd/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_3" id="__nav_3_5_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Линтеры и валидация
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Линтеры и валидация
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/liter/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/liter/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/liter/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_4" id="__nav_3_5_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Версионирование документации
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Версионирование документации
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/version/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/version/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/version/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_5" id="__nav_3_5_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Поиск и метаданные
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Поиск и метаданные
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/search/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/search/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/search/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5_6" id="__nav_3_5_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Автоматизация генерации
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_5_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Автоматизация генерации
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/auto/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/auto/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/docascode/auto/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Коммуникация и работа с экспертами
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Коммуникация и работа с экспертами
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_1" id="__nav_3_6_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Интервью с SME
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Интервью с SME
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_2" id="__nav_3_6_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Работа с разработчиками
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Работа с разработчиками
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/sme/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_3" id="__nav_3_6_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обратная связь
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Обратная связь
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/stp/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/stp/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/stp/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_4" id="__nav_3_6_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Презентация работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Презентация работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/press/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/press/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/press/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6_5" id="__nav_3_6_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кросс-функциональная работа
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_6_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Кросс-функциональная работа
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/cross/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/cross/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/comunication/cross/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Метрики, стратегия и лидерство
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Метрики, стратегия и лидерство
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_1" id="__nav_3_7_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Метрики документации
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Метрики документации
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/metricdocs/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/metricdocs/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/metricdocs/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_2" id="__nav_3_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Контент-аудит
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Контент-аудит
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/auditdoc/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/auditdoc/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/auditdoc/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_3" id="__nav_3_7_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Контент-стратегия
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Контент-стратегия
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_4" id="__nav_3_7_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Менторство
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Менторство
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_5" id="__nav_3_7_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Найм и оценка
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Найм и оценка
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/strateg/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_6" id="__nav_3_7_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Влияние на продукт
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Влияние на продукт
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/status/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/status/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/status/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7_7" id="__nav_3_7_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бюджет и вендоры
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_7_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Бюджет и вендоры
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/cashe/junior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Junior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/cashe/middle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Middle
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Roadmap/metric/cashe/senior/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Senior
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Полезное
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Полезное
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Macword/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Макрос для создания таблицы сокращений в Word
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инструкция по развертыванию MkDocs
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Инструкция по развертыванию MkDocs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Начальная настройка
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка окружения
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#git" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать репозиторий Git
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка директории
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Первый файл
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Первый пул-реквест
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Слияние
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdocs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Установка MkDocs
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка структуры сайта
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#github-pages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        GitHub Pages подготовка статичных страниц
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ci" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Настройка CI
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../WhatRead/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Что почитать
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Что почитать
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WhatRead/amir/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Амир Вафин "Абсолютная дисциплина"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WhatRead/dream/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Кэл Ньюпорт "Хватит мечтать. Займись делом"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WhatRead/streleki/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Джон П. Стрелеки "Кафе на краю земли"
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../WhatRead/bio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Бионический шрифт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+  <nav class="md-path" aria-label="Навигация" >
+    <ol class="md-path__list">
+      
+        
+  
+  
+    <li class="md-path__item">
+      <a href="../.." class="md-path__link">
+        
+  <span class="md-ellipsis">
+    Главная страница
+  </span>
+
+      </a>
+    </li>
+  
+
+      
+      
+        
+  
+  
+    
+    
+      <li class="md-path__item">
+        <a href="../" class="md-path__link">
+          
+  <span class="md-ellipsis">
+    Полезное
+  </span>
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ol>
+  </nav>
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Инструкция по развертыванию MkDocs</h1>
+
+<div class="toc">
+<ul>
+<li><a href="#_1">Начальная настройка</a></li>
+<li><a href="#_2">Настройка окружения</a></li>
+<li><a href="#git">Создать репозиторий Git</a></li>
+<li><a href="#_3">Настройка директории</a></li>
+<li><a href="#_4">Первый файл</a></li>
+<li><a href="#-">Первый пул-реквест</a></li>
+<li><a href="#_5">Слияние</a></li>
+<li><a href="#mkdocs">Установка MkDocs</a></li>
+<li><a href="#_6">Настройка структуры сайта</a></li>
+<li><a href="#github-pages">GitHub Pages подготовка статичных страниц</a></li>
+<li><a href="#ci">Настройка CI</a></li>
+</ul>
+</div>
+<h2 id="_1">Начальная настройка</h2>
+<ol>
+<li>Установить python и git</li>
+</ol>
+<blockquote>
+<p>Скачайте дистрибутивы с официальных сайтов и установите их на компьютере: python (https://www.python.org/downloads/); git (https://git-scm.com/download/win)</p>
+</blockquote>
+<ol>
+<li>Зарегистрировать аккаунт в github</li>
+</ol>
+<blockquote>
+<p>Сделать это можно на github.com (https://github.com/) (регистрация по кнопке Sign up в правом верхнем углу).</p>
+</blockquote>
+<ol>
+<li>Для работы нам понадобится какой-нибудь текстовый редактор. Я настоятельно рекомендую использовать Visual Studio Code (https://code.visualstudio.com/) — это классический редактор кода с расширенными функциями, который удобно использовать для работы с облегченными языками разметки.</li>
+</ol>
+<h2 id="_2">Настройка окружения</h2>
+<ol>
+<li>Проверить версионность python и git:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>python<span class="w"> </span>--version
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git<span class="w"> </span>--version
+</code></pre></div></p>
+<blockquote>
+<p>Если всё сделано верно, комадная строка вернёт вам версии установленного по:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>C:\Users\User1&gt;python --version
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Python 3.10.2
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>C:\Users\User1&gt;git --version
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>git version 2.33.0.windows.2
+</code></pre></div>
+</blockquote>
+<h2 id="git">Создать репозиторий Git</h2>
+<ol>
+<li>Войдите в свой аккаунт GitHub;</li>
+<li>В правом верхнем углу нажмите кнопку [+] и выберите пункт «New repository»;</li>
+<li>
+<p>Заполните поля в открывшейся форме:</p>
+<p>✒️ <strong>Repository name</strong> — обязательное поле, название и slug вашего репозитория. Вы можете использовать латиницу, цифры и некоторые символы (точку, дефис и нижнее подчёркивание). Постарайтесь придумать название, которое будет отражать суть вашего репозитория. Мой, например, называется parawriter_docs;</p>
+<p>✒️ <strong>Description</strong> — описание репозитория. Это поле необязательное, заполните его по своему усмотрению. Я ленивый, поэтому оставил описание пустым);</p>
+<p>✒️ <strong>Public or Private</strong> – Публичный репозиторий будет виден всем пользователям Интернета (в режиме просмотра), а в приватном вы сами настраиваете список допущенных лиц. В рамках курса я рекомендую создать публичный репозиторий. Для этого выберите опцию Public;</p>
+<p>✒️ <strong>Add a README file. Readme</strong> — это файл с описанием проекта. Я предлагаю добавить readme, потом мы зафиксируем в нём особенности работы с проектом. Активируйте этот чекбокс;</p>
+<p>✒️ <strong>Add .gitignore. В файле .gitignore</strong> содержится список неотслеживаемых гитом файлов и папок. Нам это пока не нужно, оставьте чекбокс неактивным;</p>
+<p>✒️ <strong>Choose a license.</strong> Лицензии защищают наше авторское право на создаваемый в репозитории продукт. В рамках этого курса я предлагаю установить стандартную универсальную общественную лицензию, которая разрешает всем желающим пользоваться вашими наработками. Раскройте список и выберите GNU General Public License;</p>
+</li>
+<li>
+<p>Нажмите кнопку <strong>Create repository</strong>.</p>
+</li>
+</ol>
+<h2 id="_3">Настройка директории</h2>
+<ol>
+<li>Определить в какой папке на компьютере будет размещаться проект. </li>
+</ol>
+<p>Теперь нужно перейти на нее в приложении командной строки.
+Для этого открыть CMD и выполнить команду:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">cd</span><span class="w"> </span>&lt;Путь<span class="w"> </span>к<span class="w"> </span>папке&gt;<span class="w"> </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Например:
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nb">cd</span><span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter
+</code></pre></div></p>
+<ol>
+<li>
+<p>Клонировать git-репозиторий в эту папку с помощью команды <code>git clone</code>.</p>
+</li>
+<li>
+<p>Войти в свой аккаунт на GitHub и открыть репозиторий. </p>
+</li>
+<li>
+<p>Нажать кнопку <em>&lt;&gt; Code</em>.</p>
+</li>
+<li>
+<p>В выпадающем окне на вкладке <em>Local</em> в разделе <em>Clone</em> выберите <em>HTTPS</em> и скопировать <em>web url</em> репозитория.</p>
+</li>
+<li>
+<p>Перейти в CMD и выполнить команду:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span>git<span class="w"> </span>clone<span class="w"> </span>repository-url
+</code></pre></div>
+Система сообщит, когда репозиторий будет полностью клонирован:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter&gt;git<span class="w"> </span>clone<span class="w"> </span>https://github.com/novillero/parawriter_docs.git
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">'parawriter_docs'</span>...
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">4</span>,<span class="w"> </span><span class="k">done</span>.
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3</span>/3<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">0</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">0</span><span class="w"> </span><span class="o">(</span>from<span class="w"> </span><span class="m">0</span><span class="o">)</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">4</span>/4<span class="o">)</span>,<span class="w"> </span><span class="m">7</span>.56<span class="w"> </span>KiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">7</span>.56<span class="w"> </span>MiB/s,<span class="w"> </span><span class="k">done</span>.
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter&gt;
+</code></pre></div></p>
+</li>
+<li>
+<p>В папке появилась новая папка с репозиторием. Чтобы работать с проектом, нужно перейти в эту папку. Для этого необходимо выполнить команду cd:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter&gt;cd<span class="w"> </span>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;
+</code></pre></div></p>
+</li>
+<li>Проверить состояние проекта - выполнить команду <code>git status</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;git<span class="w"> </span>status
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>On<span class="w"> </span>branch<span class="w"> </span>main
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Your<span class="w"> </span>branch<span class="w"> </span>is<span class="w"> </span>up<span class="w"> </span>to<span class="w"> </span>date<span class="w"> </span>with<span class="w"> </span><span class="s1">'origin/main'</span>.
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>nothing<span class="w"> </span>to<span class="w"> </span>commit,<span class="w"> </span>working<span class="w"> </span>tree<span class="w"> </span>clean
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;
+</code></pre></div><blockquote>
+<p>Система сообщает нам, что мы находимся в основной ветке проекта main, а также что наша локальная версия ветки main обновлена и совпадает с оригинальной main. Сообщение nothing to commit, working tree clean говорит о том, что мы еще не внесли никаких изменений, которые можно было бы зафиксировать.</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="_4">Первый файл</h2>
+<ol>
+<li>
+<p>Открыть CMD и перейти в папку проекта с помощью команды <code>cd путь_к_папке</code>;</p>
+</li>
+<li>
+<p>Проверить состояние проекта, выполнив команду <code>git status</code></p>
+<blockquote>
+<p>Что нужно смотреть в статусе репозитория? То, что вы находитесь в нужной ветке (main) и что у вас нет незафиксированных изменений;</p>
+</blockquote>
+</li>
+<li>
+<p>Обновить репозиторий, выполнив команду <code>git pull</code>. </p>
+<blockquote>
+<p>Эта команда забирает актуальную версию ветки из оригинального репозитория на наш компьютер. Сейчас таких изменений нет, но мы будем следовать правилам;</p>
+</blockquote>
+</li>
+<li>
+<p>Каждая новая задача (а перед нами стоит задача добавить первый файл) должна выполняться в отдельной ветке. Создать новую ветку <code>task-1-add-file</code>, отколов её от ветки <code>main</code>. Для этого выполнить команду <code>git branch task-1-add-file</code></p>
+</li>
+<li>
+<p>Новая ветка создана, но <em>git status</em> покажет, что вы до сих пор находится в ветке <em>main</em>. Чтобы переключиться на рабочую ветку, выполнить команду <code>git switch task-1-add-file</code>;</p>
+</li>
+<li>
+<p>В папке проекта создать файл index.md. </p>
+</li>
+<li>
+<p>После создания нового файла нам нужно отправить его на сервер:</p>
+</li>
+<li>
+<p>Вернуться в CMD и снова выполните команду <code>git status</code>. Система показывает, что в проекте есть изменения:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;git<span class="w"> </span>status
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>On<span class="w"> </span>branch<span class="w"> </span>task-1-add-file
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Untracked<span class="w"> </span>files:
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">  </span><span class="o">(</span>use<span class="w"> </span><span class="s2">"git add &lt;file&gt;..."</span><span class="w"> </span>to<span class="w"> </span>include<span class="w"> </span><span class="k">in</span><span class="w"> </span>what<span class="w"> </span>will<span class="w"> </span>be<span class="w"> </span>committed<span class="o">)</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">        </span>index.md
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>nothing<span class="w"> </span>added<span class="w"> </span>to<span class="w"> </span>commit<span class="w"> </span>but<span class="w"> </span>untracked<span class="w"> </span>files<span class="w"> </span>present<span class="w"> </span><span class="o">(</span>use<span class="w"> </span><span class="s2">"git add"</span><span class="w"> </span>to<span class="w"> </span>track<span class="o">)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Перед тем, как создать коммит, нужно сообщить гиту, какие изменения требуется зафиксировать в коммите. Для этого используется команда <code>git add</code>. Так как мы собираемся зафиксировать все изменения, выполнить команду в таком виде: <code>git add .</code>;</p>
+</li>
+<li>
+<p>Теперь файл <em>index.md</em> проиндексирован. Для создания коммита выполнить команду <code>git commit -m "краткое описание изменений"</code>:</p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"Добавил новый файл index.md"</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="o">[</span>task-1-add-file<span class="w"> </span>df62424<span class="o">]</span><span class="w"> </span>Добавил<span class="w"> </span>новый<span class="w"> </span>файл<span class="w"> </span>index.md
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w"> </span><span class="m">1</span><span class="w"> </span>file<span class="w"> </span>changed,<span class="w"> </span><span class="m">0</span><span class="w"> </span>insertions<span class="o">(</span>+<span class="o">)</span>,<span class="w"> </span><span class="m">0</span><span class="w"> </span>deletions<span class="o">(</span>-<span class="o">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w"> </span>create<span class="w"> </span>mode<span class="w"> </span><span class="m">100644</span><span class="w"> </span>index.md
+</code></pre></div>
+<blockquote>
+<p>Система сообщает о том, что изменения зафиксированы.</p>
+</blockquote>
+<p>Отправить коммит на сервер, выполнив команду <code>git push</code>. Так как вашей рабочей ветки ещё нет на сервере, используйте команду с флагом <code>set-upstream: git push --set-upstream origin task-1-add-file</code>. Это нужно только для первого обновления, все последующие обновления ветки можно будет проводить командой <code>git push</code> без флага;</p>
+<p>файл index.md отправился на сервер. Нам осталось создать пул-реквест и слить рабочую ветку и ветку main, чтобы обновить проект.</p>
+<h2 id="-">Первый пул-реквест</h2>
+<ol>
+<li>Открыть репозиторий в GitHub. Теперь, если вы раскроете список веток (кнопка слева над файлами репозитория, на кнопке отображается название текущей ветки main), увидите рабочую ветку <code>task-1-add-file</code>. Переключится на неё: в списке файлов появился новый файл index.md. Это значит, что изменения успешно добрались до сервера.</li>
+</ol>
+<p>Чтобы провести ревью, а потом влить внесённые изменения в проект, нужно создать запрос на слияние веток: Pull request.</p>
+<ol>
+<li>
+<p>В верхнем меню выбрать пункт <code>Pull requests</code>. Страничка пока пустая, потому что не создано ни одного запроса;</p>
+</li>
+<li>
+<p>Нажать зелёную кнопку <em>New pull request</em>;</p>
+</li>
+<li>
+<p>В разделе <em>«Compare changes»</em> выбрать ветки:</p>
+</li>
+</ol>
+<p>В поле <em>base</em> добавить ветку <em>main</em>, а в поле <em>compare</em> — ветку <code>task-1-add-file</code>.</p>
+<p>Гитхаб проводит проверку возможности слияния и выносит вердикт: <em>Able to merge</em>. Значит, всё хорошо, конфликтов не обнаружено, можно создавать пул-реквест.</p>
+<ol>
+<li>
+<p>Нажать кнопку <em>Create pull request</em>;</p>
+</li>
+<li>
+<p>Придумайте название и описание пул-реквеста: заполните поля <em>Add a title и Add a description</em>. Обычно в компаниях разработаны правила наименования пул-реквестов, но мы с вами не в обычной компании) Поэтому предлагаю придерживаться простой рекомендации: название должно кратко отражать суть задачи, а описание — подробности вносимых изменений.</p>
+</li>
+</ol>
+<blockquote>
+<p>Я назову пул-реквест «Добавление первого файла», а в описании расскажу, что именно я сделал: «Создал и добавил новый файл index.md».</p>
+</blockquote>
+<ol>
+<li>Ещё раз нажать кнопку <em>Create pull request</em>. Поздравляю, запрос создан!</li>
+</ol>
+<blockquote>
+<p>Этот запрос нужен не только для того, чтобы слить ветки. Именно здесь может проходить процесс проверки задачи и внесение правок. Обычно ссылка на пул-реквест прикрепляется к задаче, и назначенный ревьюер приходит и проверяет вашу работу. Он может перейти на вкладку Files changed и посмотреть файлы, которые вы изменили, а также оставить комментарии к любой строке этих файлов. Эти комментарии будут отображаться на  главной странице пул-реквеста, вы можете отвечать на них, ну, и конечно, вносить изменения по требованию ревьюера. После того, как все проверки будут пройдены, а правки согласованы, пул-реквест принимается и ваша рабочая ветка вливается в main, то есть добавляется в основной проект.</p>
+</blockquote>
+<ol>
+<li>Внести изменения в файл index.md и отправьте эти изменения на сервер.</li>
+</ol>
+<p>Подсказка</p>
+<blockquote>
+<p>Всю работу над задачей мы проводим в одной ветке. Если в процессе ревью вы получили правки, то вносить их нужно в той же рабочей ветке,  а потом по уже знакомому пути отправить изменения на сервер (проиндексировать изменения → создать коммит → отправить коммит). Если всё сделано правильно, ваш новый коммит попадёт в уже созданный пул-реквест.</p>
+</blockquote>
+<p>Ожидаемый результат</p>
+<blockquote>
+<p>Файл index.md изменён, в пул-реквесте на вкладке Commits отображаются два коммита.</p>
+</blockquote>
+<h2 id="_5">Слияние</h2>
+<p>Задача провести слияние и влить рабочую ветку task-1-add-file в главную ветку main.</p>
+<ol>
+<li>Открыть пул-реквест в GitHub и промотать вкладку <em>Conversation</em> до блока с подтверждением запроса;</li>
+<li>Нажать кнопку <em>Merge pull request</em>.</li>
+<li>Нажать кнопку <em>Confirm merge</em>;</li>
+<li>GitHub автоматически вольёт изменения в ветку <code>main</code> и сообщит о том, что всё прошло успешно: <em>«Pull request successfully merged and closed»</em>.</li>
+</ol>
+<h2 id="mkdocs">Установка MkDocs</h2>
+<ol>
+<li>Установить генератор <em>MkDocs</em>. Для этого откройте CMD и выполните команду:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs
+</code></pre></div>
+<ol>
+<li>Установить тему <em>MkDocs material theme</em> с помощью команды:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>pip<span class="w"> </span>install<span class="w"> </span>mkdocs-material
+</code></pre></div>
+<ol>
+<li>
+<p>Перейти в папку с репозиторием проекта с помощью команды <code>cd путь_к_папке</code>;</p>
+</li>
+<li>
+<p>Проверить состояние проекта с помощью команды <code>git status</code>. Убедится, что находитесь в главной ветке. Если нет, переключитесь на неё (команда <code>git switch main</code>);</p>
+</li>
+<li>
+<p>Обновить репозиторий с помощью команды <code>git pull</code>;</p>
+</li>
+<li>
+<p>Отколоть новую ветку, в которой будет совершаться настройка проекта. Например <em>task-2-setup-mkdocs</em>;</p>
+</li>
+<li>Открыть папку проекта через проводник;</li>
+<li>В папке создать <em>mkdocs.yml</em>. Это конфиг, с помощью которого будет происходить настройка документации;</li>
+<li>Привести структуру проекта к шаблону:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>├─ docs/
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>│  └─ index.md
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>└─ mkdocs.yml
+</code></pre></div>
+<p>По шаблону все исходники должны лежать в подпапке docs. Создать папку <em>docs</em> и перенести туда файл <em>index.md</em>;
+10. Открыть файл mkdocs.yml (с помощью VS Code или любого другого редактора кода) и добавить  название проекта:
+<code>site_name: [Название сайта]</code>
+11. Сохранить изменения в <em>mkdocs.yml</em> и закрыть файл.</p>
+<ol>
+<li>Выполнить команду <code>mkdocs serve</code>
+Если всё сделано правильно, в ответ придёт адрес локального порта, на котором собралась дока:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>C:<span class="se">\U</span>sers<span class="se">\U</span>ser1<span class="se">\p</span>arawriter<span class="se">\p</span>arawriter_docs&gt;mkdocs<span class="w"> </span>serve
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>INFO<span class="w">    </span>-<span class="w">  </span>Building<span class="w"> </span>documentation...
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>INFO<span class="w">    </span>-<span class="w">  </span>Cleaning<span class="w"> </span>site<span class="w"> </span>directory
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>INFO<span class="w">    </span>-<span class="w">  </span>Documentation<span class="w"> </span>built<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="m">0</span>.11<span class="w"> </span>seconds
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">11</span>:59:50<span class="o">]</span><span class="w"> </span>Watching<span class="w"> </span>paths<span class="w"> </span><span class="k">for</span><span class="w"> </span>changes:<span class="w"> </span><span class="s1">'docs'</span>,<span class="w"> </span><span class="s1">'mkdocs.yml'</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>INFO<span class="w">    </span>-<span class="w">  </span><span class="o">[</span><span class="m">11</span>:59:50<span class="o">]</span><span class="w"> </span>Serving<span class="w"> </span>on<span class="w"> </span>http://127.0.0.1:8000/
+</code></pre></div>
+Если перейти по адресу в последней строке, то можно увидеть как будет выглядеть сайт.</li>
+</ol>
+<p>Теперь дело за малым: закоммитьте изменения, отправьте их на сервер, создайте пул-реквест и влейте рабочую ветку в ветку main. </p>
+<ol>
+<li>
+<p>Выполнить команду <code>-git add .</code></p>
+</li>
+<li>
+<p>Выполнить команду <code>git commit -m "краткое описание изменений"</code>.</p>
+</li>
+<li>
+<p>В GitHub выберите пункт <em>Pull requests</em>. </p>
+</li>
+<li>Нажать кнопку <em>New pull request</em>.</li>
+<li>В разделе <em>«Compare changes»</em> выбрать ветки: 
+В поле base нужно добавить ветку main, а в поле compare — ветку с которой ведётся работа.</li>
+<li>Нажать кнопку <em>Create pull request</em>.</li>
+<li>Заполнить описание пул-реквеста.</li>
+<li>Нажать кнопку <em>Create pull request</em>.</li>
+</ol>
+<h2 id="_6">Настройка структуры сайта</h2>
+<p>Пример структуры сайта:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>Главная страница  // файл index.md
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>├─ Онбординг тех.писателя // файл onboarding.md
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>│  ├── Первый урок // файл onboarding/lesson_1.md
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>│  ├── Второй урок // файл onboarding/lesson_2.md
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>│  ├── &lt;...&gt;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>│  └── Последний урок // файл onboarding/lesson_last.md
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>└─ Docs-as-code для самых маленьких // файл docs_as_code.md
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>   ├── Первый урок // файл docs_as_code/lesson_1.md
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>   ├── Второй урок // файл docs_as_code/lesson_2.md
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>   ├── &lt;...&gt;
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>   └── Последний урок // файл docs_as_code/lesson_last.md
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>   ```
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>   &gt;!Все изменения делать в новой ветке.
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>Пример заполнения mkdocs.yml
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>```shell
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>site_name: Rivers and lakes # Название сайта
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>site_description: Rivers and lakes of Russia # Описание сайта, добавляется в meta-теги
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>theme: # Тема сайта, информация о ее параметрах
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>  name: material # Название темы
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>  logo: logo.svg # Ссылка на логотип сайта
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>  font:
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>    text: Roboto # Шрифт текста
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>    code: Roboto Mono # Шрифт для текста кода
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>  features:
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>    #- navigation.sections
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>    - navigation.path # Хлебные крошки
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>    - navigation.indexes # Позволяет создавать корневые страницы разделов меню. Корневая страница должна лежать в папке раздела и называться index.md. Пример использования корневых страниц приведен ниже в настройках nav
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>    #- navigation.tabs # Верхнее меню
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>    #- navigation.tabs.sticky # Фиксация верхнего меню
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>    #- Navigation sections # Настройка спойлеров в левом меню
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>    #- navigation.expand # Разворачивает спойлеры в левом меню по умолчанию
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>    #- toc.integrate # Фиксирует оглавление страницы в левом меню
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>    - navigation.instant # Функция быстрой загрузки страниц
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>    - navigation.top # Добавляет кнопку «к началу» для быстрой обратной прокрутки страницы
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>    - search.suggest # Подсказки при вводе поискового запроса
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>    - search.highlight # Подсветка результатов поиска в тексте страницы
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>    - content.code.copy # Кнопка копирования в блоке кода
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>  language: ru # Язык
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>  palette: # Настройки светлой и тёмной тем
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>    # Настройки светлой темы
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>    - scheme: default 
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>      toggle:
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>        icon: material/weather-sunny # Иконка для активации светлой темы
+<a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>        name: Выключить солнышко # Всплывающий текст-подсказка
+<a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a>      primary: blue # Основной цвет
+<a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a>      accent: purple # Акцентный цвет
+<a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>    # Настройки тёмной темы
+<a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a>    - scheme: slate
+<a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a>      toggle:
+<a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a>        icon: material/weather-night
+<a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a>        name: Позвать солнышко
+<a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>      primary: deep purple
+<a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a>      accent: blue
+<a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a>
+<a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a>nav: # Структура сайта
+<a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a>    - Главная страница: index.md
+<a id="__codelineno-14-61" name="__codelineno-14-61" href="#__codelineno-14-61"></a>    - Озёра России: 
+<a id="__codelineno-14-62" name="__codelineno-14-62" href="#__codelineno-14-62"></a>      - lakes/index.md
+<a id="__codelineno-14-63" name="__codelineno-14-63" href="#__codelineno-14-63"></a>      - Онежское озеро: lakes/onega.md
+<a id="__codelineno-14-64" name="__codelineno-14-64" href="#__codelineno-14-64"></a>      - Ладожское озеро: lakes/ladoga.md
+<a id="__codelineno-14-65" name="__codelineno-14-65" href="#__codelineno-14-65"></a>      - Байкал: lakes/baikal.md
+<a id="__codelineno-14-66" name="__codelineno-14-66" href="#__codelineno-14-66"></a>    - Реки России:
+<a id="__codelineno-14-67" name="__codelineno-14-67" href="#__codelineno-14-67"></a>      - rivers/index.md
+<a id="__codelineno-14-68" name="__codelineno-14-68" href="#__codelineno-14-68"></a>      - Свирь: rivers/svir.md
+<a id="__codelineno-14-69" name="__codelineno-14-69" href="#__codelineno-14-69"></a>      - Нева: rivers/neva.md
+<a id="__codelineno-14-70" name="__codelineno-14-70" href="#__codelineno-14-70"></a>      - Ангара: rivers/angara.md
+<a id="__codelineno-14-71" name="__codelineno-14-71" href="#__codelineno-14-71"></a>
+<a id="__codelineno-14-72" name="__codelineno-14-72" href="#__codelineno-14-72"></a>extra:
+<a id="__codelineno-14-73" name="__codelineno-14-73" href="#__codelineno-14-73"></a>  social: # Ссылки на соц.сети
+<a id="__codelineno-14-74" name="__codelineno-14-74" href="#__codelineno-14-74"></a>    - icon: fontawesome/brands/github-alt # Иконка гитхаба
+<a id="__codelineno-14-75" name="__codelineno-14-75" href="#__codelineno-14-75"></a>      link: https://github.com/{your_account} # Ссылка на гитхаб
+<a id="__codelineno-14-76" name="__codelineno-14-76" href="#__codelineno-14-76"></a>
+<a id="__codelineno-14-77" name="__codelineno-14-77" href="#__codelineno-14-77"></a>markdown_extensions: # Расширения markdown
+<a id="__codelineno-14-78" name="__codelineno-14-78" href="#__codelineno-14-78"></a>  - admonition # Поддержка информационных панелей (сообщений типа «Внимание», «Совет», «Примечание», etc.)
+<a id="__codelineno-14-79" name="__codelineno-14-79" href="#__codelineno-14-79"></a>  - footnotes # Поддержка встроенных сносок на страницах
+<a id="__codelineno-14-80" name="__codelineno-14-80" href="#__codelineno-14-80"></a>  - attr_list # Использование html-атрибутов и CSS в элементах markdown
+<a id="__codelineno-14-81" name="__codelineno-14-81" href="#__codelineno-14-81"></a>  - md_in_html # Поддержка markdown внутри html
+<a id="__codelineno-14-82" name="__codelineno-14-82" href="#__codelineno-14-82"></a>  - def_list # Поддержка списков определений
+<a id="__codelineno-14-83" name="__codelineno-14-83" href="#__codelineno-14-83"></a>  - pymdownx.tabbed # Использование вкладок (табов)
+<a id="__codelineno-14-84" name="__codelineno-14-84" href="#__codelineno-14-84"></a>  - pymdownx.details # Использование спойлеров (катов)
+<a id="__codelineno-14-85" name="__codelineno-14-85" href="#__codelineno-14-85"></a>  - pymdownx.highlight: # Подсветка синтаксиса в блоках кода
+<a id="__codelineno-14-86" name="__codelineno-14-86" href="#__codelineno-14-86"></a>      anchor_linenums: true
+<a id="__codelineno-14-87" name="__codelineno-14-87" href="#__codelineno-14-87"></a>  - pymdownx.superfences # Поддержка вложенных блоков кода
+<a id="__codelineno-14-88" name="__codelineno-14-88" href="#__codelineno-14-88"></a>  - pymdownx.snippets # Использование заимствованного контента
+<a id="__codelineno-14-89" name="__codelineno-14-89" href="#__codelineno-14-89"></a>  - pymdownx.emoji: # Иконки и эмодзи
+<a id="__codelineno-14-90" name="__codelineno-14-90" href="#__codelineno-14-90"></a>      emoji_index: !!python/name:material.extensions.emoji.twemoji
+<a id="__codelineno-14-91" name="__codelineno-14-91" href="#__codelineno-14-91"></a>      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+<a id="__codelineno-14-92" name="__codelineno-14-92" href="#__codelineno-14-92"></a>
+<a id="__codelineno-14-93" name="__codelineno-14-93" href="#__codelineno-14-93"></a>copyright: |
+<a id="__codelineno-14-94" name="__codelineno-14-94" href="#__codelineno-14-94"></a>  &amp;copy; 2024 NOVILLERO
+</code></pre></div>
+<p>Подробное описание настроек конфига можно посмотреть тут (<a href="https://squidfunk.github.io/mkdocs-material/setup/">https://squidfunk.github.io/mkdocs-material/setup/</a>).</p>
+<p>Собрать доку локально с помощью команды <code>mkdocs serve</code> убедится, что всё работает.</p>
+<p>Отправьте изменения на сервер. Не забыть, что все изменения проводятся в новой ветке.</p>
+<h2 id="github-pages">GitHub Pages подготовка статичных страниц</h2>
+<p>Выполнить публикацию вручную:</p>
+<ol>
+<li>Открыть CMD;</li>
+<li>Зайти в папку с проектом, используя команду <code>cd</code>;</li>
+<li>Убедится, что находитесь в ветке main и что все изменения собраны в коммиты и залиты в <code>main</code>;</li>
+<li>Выполните команду для сборки и публикации сайта:</li>
+</ol>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>mkdocs<span class="w"> </span>gh-deploy
+</code></pre></div>
+<p>Если процесс прошёл без ошибок, в ответе на команду <code>mkdocs gh-deploy</code> отобразится URL сайта:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&lt;…&gt;
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>To https://github.com/novillero/parawriter_docs.git
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a> * [new branch]      gh-pages -&gt; gh-pages
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>INFO    -  Your documentation should shortly be available at: https://novillero.github.io/parawriter_docs/
+</code></pre></div>
+<ol>
+<li>Открыть репозиторий в <em>Github</em> и перейти на вкладку <em>Settings</em>;</li>
+<li>В левом меню выберите пункт <em>Pages</em>;</li>
+<li>На этой странице указаны настройки публикации сайта на <em>GitHub Pages</em>.</li>
+</ol>
+<p>Проверить на установленные значения:</p>
+<blockquote>
+<p>Sourse — Deploy from a branch;
+Branch — gh-pages; folder — /(root).</p>
+</blockquote>
+<p>Это значит, что сайт публикуется из ветки, ветка для публикации — gh-pages.</p>
+<ol>
+<li>Открыть вкладку Action. Здесь отображаются все запущенные <em>workflow</em> публикации сайта.</li>
+</ol>
+<blockquote>
+<p>Каждый раз, когда вы запускаете сборку командой mkdocs gh-deploy, в разделе Actions → All workflow появляется новая запись.</p>
+</blockquote>
+<ol>
+<li>Нажать на запись, чтобы увидеть подробности сборки и ссылку на опубликованный сайт. Зелёная галочка сообщает о том, что процесс прошёл удачно и сайт опубликован. <strong>Красный крестик показывает, что сборка и публикация завершились ошибкой. В этом случае стоит проверить валидность конфига и файлов проекта.</strong></li>
+</ol>
+<p>Ошибки и предупреждения можно посмотреть с помощью команды <code>mkdocs serve</code> — все они отобразятся в командной строке.</p>
+<blockquote>
+<p>Главная цель достигнута — сайт с документацией опубликован. Теперь вы можете каждый раз после обновления проекта (вливания рабочей ветки в main) запускать пересборку и публикацию изменений.</p>
+</blockquote>
+<h2 id="ci">Настройка CI</h2>
+<ol>
+<li>Открыть CMD и перейти в папку проекта с помощью команды cd;</li>
+<li>Создать новую рабочую ветку;</li>
+<li>Открыть папку с проектом через проводник;</li>
+<li>Создать новую папку <code>.github</code>в корне проекта;</li>
+<li>Внутри папки .github создать папку <em>workflows</em>;</li>
+<li>Внутри папки workflows создайте новый файл ci.yml;</li>
+<li>Открыть файл <em>ci.yml</em> с помощью VS Code или другого редактора;</li>
+<li>Скопировать текст ниже и вставить его в файл <em>ci.yml</em>:</li>
+</ol>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>name: ci
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>on:
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  push:
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    branches:
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>      - main
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>permissions:
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>  contents: write
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>jobs:
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>  deploy:
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    runs-on: ubuntu-latest
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    steps:
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>      - uses: actions/checkout@v3
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>      - uses: actions/setup-python@v4
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>        with:
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>          python-version: 3.x
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>      - uses: actions/cache@v2
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>        with:
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>          key: ${{ github.ref }}
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>          path: .cache
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>      - run: pip install mkdocs-material
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>      - run: mkdocs gh-deploy --force
+</code></pre></div>
+9. Сохранить изменения, отправить их на сервер;</p>
+<ol>
+<li>
+<p>Войти в GitHub, создать пул-реквест и слить рабочую ветку с веткой <em>main</em>.</p>
+</li>
+<li>
+<p>Перейти в раздел <em>Actions → All workflow</em>. В списке <em>workflow</em> появилась новая запись — это и есть наш новый автоматический процесс. Если он завершился успешно (все этапы отмечены зелёными галочками), значит, всё получилось. Для проверки можете внести какие-нибудь изменения в исходные файлы и добавить их в ветку <em>main</em>. После сливания рабочей ветки с веткой main в <em>Actions</em> опять должен запуститься новый <em>workflow</em>. Дождитесь его завершения, перейдите на сайт и убедитесь, что там отобразились ваши изменения.</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.path", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "Navigation sections", "toc.integrate", "navigation.instant", "navigation.top", "search.suggest", "search.highlight", "content.code.copy"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
