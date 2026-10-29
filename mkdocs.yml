@@ -8,13 +8,13 @@ theme: # Тема сайта, информация о ее параметрах
     text: Roboto # Шрифт текста
     code: Roboto Mono # Шрифт для текста кода 
   features:
-    #- navigation.sections
+    # - navigation.sections
     - navigation.path # Хлебные крошки
     - navigation.indexes # Позволяет создавать корневые страницы разделов меню. Корневая страница должна лежать в папке раздела и называться index.md. Пример использования корневых страниц приведен ниже в настройках nav
     - navigation.tabs # Верхнее меню
     - navigation.tabs.sticky # Фиксация верхнего меню
     - Navigation sections # Настройка спойлеров в левом меню
-    - navigation.expand # Разворачивает спойлеры в левом меню по умолчанию
+  #  - navigation.expand # Разворачивает спойлеры в левом меню по умолчанию
     - toc.integrate # Фиксирует оглавление страницы в левом меню
     - navigation.instant # Функция быстрой загрузки страниц
     - navigation.top # Добавляет кнопку «к началу» для быстрой обратной прокрутки страницы
@@ -47,13 +47,155 @@ nav: # Структура сайта
           - Junior: Roadmap/base/md/junior.md
           - Middle: Roadmap/base/md/middle.md
           - Senior: Roadmap/base/md/senior.md
+        - Git/GitHub:
+          - Junior: Roadmap/base/git/junior.md
+          - Middle: Roadmap/base/git/middle.md
+          - Senior: Roadmap/base/git/senior.md
+        - Редакторы(IDE):
+          - Junior: Roadmap/base/ide/junior.md
+          - Middle: Roadmap/base/ide/middle.md
+          - Senior: Roadmap/base/ide/senior.md
+        - Стиль и тон:
+          - Junior: Roadmap/base/style/junior.md
+          - Middle: Roadmap/base/style/middle.md
+          - Senior: Roadmap/base/style/senior.md 
+        - Структура текста:
+          - Junior: Roadmap/base/text/junior.md
+          - Middle: Roadmap/base/text/middle.md
+          - Senior: Roadmap/base/text/senior.md
+        - Английский:
+          - Junior: Roadmap/base/english/junior.md
+          - Middle: Roadmap/base/english/middle.md
+          - Senior: Roadmap/base/english/senior.md
+      - Типы документации и методология:
+        - How-to/Tutorial: 
+          - Junior: Roadmap/metod/tutorial/junior.md
+          - Middle: Roadmap/metod/tutorial/middle.md
+          - Senior: Roadmap/metod/tutorial/senior.md
+        - Reference: 
+          - Junior: Roadmap/metod/reference/junior.md
+          - Middle: Roadmap/metod/reference/middle.md
+          - Senior: Roadmap/metod/reference/senior.md
+        - Explanation: 
+          - Junior: Roadmap/metod/explanation/junior.md
+          - Middle: Roadmap/metod/explanation/middle.md
+          - Senior: Roadmap/metod/explanation/senior.md
+        - Release notes: 
+          - Junior: Roadmap/metod/release/junior.md
+          - Middle: Roadmap/metod/release/middle.md
+          - Senior: Roadmap/metod/release/senior.md
+        - Troubleshooting: 
+          - Junior: Roadmap/metod/troubleshooting/junior.md
+          - Middle: Roadmap/metod/troubleshooting/middle.md
+          - Senior: Roadmap/metod/troubleshooting/senior.md
+        - Аудиторный анализ: 
+          - Junior: Roadmap/metod/audit/junior.md
+          - Middle: Roadmap/metod/audit/middle.md
+          - Senior: Roadmap/metod/audit/senior.md
+      - API-документация и техническая глубина:
+        - REST / HTTP: 
+          - Junior: Roadmap/api/rest/junior.md
+          - Middle: Roadmap/api/rest/middle.md
+          - Senior: Roadmap/api/rest/senior.md
+        - JSON / XML: 
+          - Junior: Roadmap/api/json/junior.md
+          - Middle: Roadmap/api/json/middle.md
+          - Senior: Roadmap/api/json/senior.md
+        - OpenAPI / Swagger: 
+          - Junior: Roadmap/api/openapi/junior.md
+          - Middle: Roadmap/api/openapi/middle.md
+          - Senior: Roadmap/api/openapi/senior.md
+        - Postman / тестирование API: 
+          - Junior: Roadmap/api/postman/junior.md
+          - Middle: Roadmap/api/postman/middle.md
+          - Senior: Roadmap/api/postman/senior.md
+        - Понимание кода: 
+          - Junior: Roadmap/api/code/junior.md
+          - Middle: Roadmap/api/code/middle.md
+          - Senior: Roadmap/api/code/senior.md
+        - Документация SDK: 
+          - Junior: Roadmap/api/sdk/junior.md
+          - Middle: Roadmap/api/sdk/middle.md
+          - Senior: Roadmap/api/sdk/senior.md
+      - Docs-as-code и автоматизация:
+        - Статический генератор: 
+          - Junior: Roadmap/docascode/ssg/junior.md
+          - Middle: Roadmap/docascode/ssg/middle.md
+          - Senior: Roadmap/docascode/ssg/senior.md
+        - CI/CD для документации: 
+          - Junior: Roadmap/docascode/cicd/junior.md
+          - Middle: Roadmap/docascode/cicd/middle.md
+          - Senior: Roadmap/docascode/cicd/senior.md
+        - Линтеры и валидация: 
+          - Junior: Roadmap/docascode/liter/junior.md
+          - Middle: Roadmap/docascode/liter/middle.md
+          - Senior: Roadmap/docascode/liter/senior.md  
+        - Версионирование документации:
+          - Junior: Roadmap/docascode/version/junior.md
+          - Middle: Roadmap/docascode/version/middle.md
+          - Senior: Roadmap/docascode/version/senior.md
+        - Поиск и метаданные:
+          - Junior: Roadmap/docascode/search/junior.md
+          - Middle: Roadmap/docascode/search/middle.md
+          - Senior: Roadmap/docascode/search/senior.md
+        - Автоматизация генерации:
+          - Junior: Roadmap/docascode/auto/junior.md
+          - Middle: Roadmap/docascode/auto/middle.md
+          - Senior: Roadmap/docascode/auto/senior.md
+      - Коммуникация и работа с экспертами:
+        - Интервью с SME: 
+          - Junior: Roadmap/comunication/sme/junior.md
+          - Middle: Roadmap/comunication/sme/middle.md
+          - Senior: Roadmap/comunication/sme/senior.md
+        - Работа с разработчиками: 
+          - Junior: Roadmap/comunication/sme/junior.md
+          - Middle: Roadmap/comunication/sme/middle.md
+          - Senior: Roadmap/comunication/sme/senior.md
+        - Обратная связь: 
+          - Junior: Roadmap/comunication/stp/junior.md
+          - Middle: Roadmap/comunication/stp/middle.md
+          - Senior: Roadmap/comunication/stp/senior.md
+        - Презентация работы: 
+          - Junior: Roadmap/comunication/press/junior.md
+          - Middle: Roadmap/comunication/press/middle.md
+          - Senior: Roadmap/comunication/press/senior.md
+        - Кросс-функциональная работа: 
+          - Junior: Roadmap/comunication/cross/junior.md
+          - Middle: Roadmap/comunication/cross/middle.md
+          - Senior: Roadmap/comunication/cross/senior.md
+      - Метрики, стратегия и лидерство:
+        - Метрики документации: 
+          - Junior: Roadmap/metric/metricdocs/junior.md
+          - Middle: Roadmap/metric/metricdocs/middle.md
+          - Senior: Roadmap/metric/metricdocs/senior.md
+        - Контент-аудит: 
+          - Junior: Roadmap/metric/auditdoc/junior.md
+          - Middle: Roadmap/metric/auditdoc/middle.md
+          - Senior: Roadmap/metric/auditdoc/senior.md
+        - Контент-стратегия: 
+          - Junior: Roadmap/metric/strateg/junior.md
+          - Middle: Roadmap/metric/strateg/middle.md
+          - Senior: Roadmap/metric/strateg/senior.md
+        - Менторство: 
+          - Junior: Roadmap/metric/strateg/junior.md
+          - Middle: Roadmap/metric/strateg/middle.md
+          - Senior: Roadmap/metric/strateg/senior.md
+        - Найм и оценка: 
+          - Junior: Roadmap/metric/strateg/junior.md
+          - Middle: Roadmap/metric/strateg/middle.md
+          - Senior: Roadmap/metric/strateg/senior.md
+        - Влияние на продукт: 
+          - Junior: Roadmap/metric/status/junior.md
+          - Middle: Roadmap/metric/status/middle.md
+          - Senior: Roadmap/metric/status/senior.md
+        - Бюджет и вендоры: 
+          - Junior: Roadmap/metric/cashe/junior.md
+          - Middle: Roadmap/metric/cashe/middle.md
+          - Senior: Roadmap/metric/cashe/senior.md
     - Полезное: 
       - Полезное: useful/index.md
       - Макрос для создания таблицы сокращений в Word: useful/Macword.md
-      - Инструкция по развертыванию MkDocs: useful/macros/#1 Begin.md
-    - Обзоры: 
-      - Обзоры: reviews/index.md
-      - Обзор любимых книг ч.1: reviews/time.md
+      - Инструкция по развертыванию MkDocs: useful/Begin.md
     - Что почитать: 
       - Что почитать: WhatRead/index.md
       - Амир Вафин "Абсолютная дисциплина": WhatRead/amir.md
